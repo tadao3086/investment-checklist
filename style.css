@@ -20,15 +20,26 @@
 
 body {
     font-family: 'Inter', 'Noto Sans JP', sans-serif;
-    background-color: var(--bg-color);
+    background-image: url('Gemini_Generated_Image_11nj3y11nj3y11nj.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.5;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent white */
+    backdrop-filter: blur(8px);
+    /* Glassmorphism effect */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 header {
