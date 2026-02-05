@@ -31,26 +31,30 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 900px;
+    /* Wider container for 2 columns */
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.6);
     /* Semi-transparent white */
     backdrop-filter: blur(8px);
     /* Glassmorphism effect */
-    padding: 30px;
+    padding: 20px;
+    /* Reduced padding */
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    /* Reduced margin */
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    /* Smaller title */
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--text-main);
 }
 
@@ -65,19 +69,21 @@ h1 {
 
 /* Checklist Styling */
 .checklist-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 Columns */
+    gap: 10px;
 }
 
 .checklist-item {
     background: var(--card-bg);
     border-radius: var(--radius);
-    padding: 16px;
+    padding: 12px;
+    /* Reduced padding */
     display: flex;
     align-items: flex-start;
     /* Align top for multi-line text */
-    gap: 16px;
+    gap: 10px;
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -204,7 +210,7 @@ button:active {
 }
 
 .result-area {
-    margin-top: 40px;
+    margin-top: 20px;
     animation: fadeIn 0.5s ease-out;
 }
 
@@ -295,6 +301,13 @@ footer {
 }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+    .checklist-container {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+}
+
 @media (min-width: 600px) {
     button {
         width: auto;
