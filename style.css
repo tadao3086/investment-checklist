@@ -121,6 +121,14 @@ h1 {
     display: block;
 }
 
+/* Icon Styling */
+.icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-top: -2px;
+    /* Adjust alignment with title */
+}
+
 /* Checked State for Card */
 .checklist-item:has(input:checked) {
     border-color: var(--accent-color);
